@@ -20,7 +20,7 @@ import { AppService } from './app.service';
     ConfigModule.forRoot({ isGlobal: true }),
 
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
+      rootPath: join(__dirname,'..',  'public'),
     }),
     DatabaseModule,
     AuthModule,
