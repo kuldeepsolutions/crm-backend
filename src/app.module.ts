@@ -17,11 +17,11 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({isGlobal:true}),
-   
-    // ServeStaticModule.forRoot({
-    //   rootPath: join(__dirname, '..', 'public'),
-    // }),
+    ConfigModule.forRoot({ isGlobal: true }),
+
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+    }),
     DatabaseModule,
     AuthModule,
     UserModule,
@@ -30,9 +30,9 @@ import { AppService } from './app.service';
     ContactsModule,
     CompanyModule,
     EmailsModule,
-    TasksModule
+    TasksModule,
   ],
   controllers: [AppController],
-  providers: [JwtStrategy,AppService],
+  providers: [JwtStrategy, AppService],
 })
 export class AppModule {}
