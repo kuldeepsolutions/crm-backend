@@ -19,9 +19,9 @@ import { AppService } from './app.service';
   imports: [
     ConfigModule.forRoot({isGlobal:true}),
    
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
-    }),
+    // ServeStaticModule.forRoot({
+    //   rootPath: join(__dirname, '..', 'public'),
+    // }),
     DatabaseModule,
     AuthModule,
     UserModule,
